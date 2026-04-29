@@ -92,6 +92,25 @@ SmartCampus/
 ## Setup Instructions
 
 ### 1. Database Setup
+Take note of the following code:-
+
+CREATE DATABASE smartcampus;
+USE smartcampus;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    password VARCHAR(50)
+);
+
+CREATE TABLE timetable (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    subject VARCHAR(50),
+    start_time INT,
+    end_time INT,
+    room VARCHAR(10)
+);
 
 ### 2. Add JDBC Driver
 Download MySQL Connector/J and place the .jar file in your project directory.
@@ -112,6 +131,57 @@ Map visualizes:
 Optimal route
 Crowd density
 User movement
+
+## workflow
+# Login Interface
+<p align="center">
+  <img src="assets/Login_UI.png" width="500"/>
+</p>
+
+# Main Dashboard
+<p align="center">
+  <img src="assets/Main_UI.png" width="700"/>
+</p>
+
+# Select Class
+<p align="center">
+  <img src="assets/SelectClass.png" width="500"/>
+</p>
+
+# Route Navigation
+<p align="center">
+  <img src="assets/RouteNavigation.png" width="600"/>
+</p>
+
+# Add Class
+<p align="center">
+  <img src="assets/AddClass(enter-Subject).png" width="500"/>
+</p>
+
+# Start time
+<p align="center">
+  <img src="assets/StartTime.png" width="500"/>
+</p>
+
+# End time
+<p align="center">
+  <img src="assets/EndTime.png" width="500"/>
+</p>
+
+# Destination
+<p align="center">
+  <img src="assets/SelectDestination.png" width="500"/>
+</p>
+
+# Source
+<p align="center">
+  <img src="assets/SourceSelection.png" width="500"/>
+</p>
+
+# Find route
+<p align="center">
+  <img src="assets/FindRoute.png" width="600"/>
+</p>
 
 #### Future Enhancements
 
